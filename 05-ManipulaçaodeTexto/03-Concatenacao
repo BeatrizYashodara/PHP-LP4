@@ -1,0 +1,10 @@
+<?php
+
+$nome = "Beatriz";
+$curso = "Programação";
+
+$frase = "Olá, meu nome é " . $nome . " e estou estudando " . $curso;
+
+echo $frase;
+
+?>

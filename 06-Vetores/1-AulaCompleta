@@ -1,0 +1,289 @@
+Vamos fazer uma aula completa sobre vetores em PHP 👩‍💻📚
+Em PHP, vetores são chamados de arrays.
+
+Vou explicar como se fosse uma aula de programação:
+
+O que são vetores
+
+Como criar vetores
+
+Como acessar valores
+
+Como percorrer vetores
+
+Funções importantes
+
+Exemplos com código comentado e saída esperada
+
+1️⃣ O que é um vetor (array)?
+
+Um vetor é uma variável que pode guardar vários valores ao mesmo tempo.
+
+Exemplo na vida real:
+
+Uma variável comum guarda um valor:
+
+$nome = "Beatriz";
+
+Um vetor pode guardar vários nomes:
+
+$nomes = ["Beatriz", "Carlos", "Ana", "João"];
+
+📌 Cada posição do vetor possui um índice (posição).
+
+Índice   Valor
+0        Beatriz
+1        Carlos
+2        Ana
+3        João
+
+⚠️ Em PHP (como na maioria das linguagens), os índices começam em 0.
+
+2️⃣ Criando um vetor
+
+Existem duas formas.
+
+Forma moderna (mais usada)
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+print_r($frutas);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [1] => banana
+    [2] => laranja
+)
+Forma antiga
+$frutas = array("maçã", "banana", "laranja");
+
+Hoje em dia, quase todos usam [ ].
+
+3️⃣ Acessando valores do vetor
+
+Para acessar um valor usamos o índice.
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+echo $frutas[0];
+
+?>
+Saída
+maçã
+
+Outro exemplo:
+
+echo $frutas[2];
+Saída
+laranja
+4️⃣ Alterando valores
+
+Podemos modificar um valor do vetor.
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+$frutas[1] = "uva";
+
+print_r($frutas);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [1] => uva
+    [2] => laranja
+)
+5️⃣ Adicionando valores ao vetor
+Adicionando no final
+<?php
+
+$frutas = ["maçã", "banana"];
+
+$frutas[] = "laranja";
+
+print_r($frutas);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [1] => banana
+    [2] => laranja
+)
+6️⃣ Contando elementos do vetor
+
+Função: count()
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+echo count($frutas);
+
+?>
+Saída
+3
+7️⃣ Percorrendo vetores com FOR
+
+Muito usado em exercícios de programação.
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+for ($i = 0; $i < count($frutas); $i++) {
+
+    echo $frutas[$i] . "<br>";
+
+}
+
+?>
+Saída
+maçã
+banana
+laranja
+8️⃣ Percorrendo vetores com FOREACH
+
+Forma mais usada em PHP.
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+foreach ($frutas as $fruta) {
+
+    echo $fruta . "<br>";
+
+}
+
+?>
+Saída
+maçã
+banana
+laranja
+9️⃣ Vetores associativos
+
+Diferente dos vetores normais, aqui usamos nomes como índice.
+
+Exemplo: dados de um usuário.
+
+<?php
+
+$usuario = [
+    "nome" => "Beatriz",
+    "idade" => 22,
+    "cidade" => "São Paulo"
+];
+
+echo $usuario["nome"];
+
+?>
+Saída
+Beatriz
+
+Outro exemplo:
+
+echo $usuario["cidade"];
+Saída
+São Paulo
+🔟 Percorrendo vetor associativo
+<?php
+
+$usuario = [
+    "nome" => "Beatriz",
+    "idade" => 22,
+    "cidade" => "São Paulo"
+];
+
+foreach ($usuario as $chave => $valor) {
+
+    echo $chave . ": " . $valor . "<br>";
+
+}
+
+?>
+Saída
+nome: Beatriz
+idade: 22
+cidade: São Paulo
+1️⃣1️⃣ Ordenando vetores
+Ordem alfabética
+<?php
+
+$nomes = ["Carlos", "Ana", "Beatriz"];
+
+sort($nomes);
+
+print_r($nomes);
+
+?>
+Saída
+Array
+(
+    [0] => Ana
+    [1] => Beatriz
+    [2] => Carlos
+)
+1️⃣2️⃣ Removendo elementos
+
+Função: unset()
+
+<?php
+
+$frutas = ["maçã", "banana", "laranja"];
+
+unset($frutas[1]);
+
+print_r($frutas);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [2] => laranja
+)
+💻 Exemplo completo (como exercício de aula)
+
+Programa que guarda 5 notas de aluno e mostra todas.
+
+<?php
+
+$notas = [8, 7, 10, 6, 9];
+
+for ($i = 0; $i < count($notas); $i++) {
+
+    echo "Nota " . ($i+1) . ": " . $notas[$i] . "<br>";
+
+}
+
+?>
+Saída
+Nota 1: 8
+Nota 2: 7
+Nota 3: 10
+Nota 4: 6
+Nota 5: 9
+🧠 Tipos de vetores em PHP
+Tipo	Descrição
+Indexado	usa números como índice
+Associativo	usa nomes como índice
+Multidimensional	vetor dentro de vetor
+
+Exemplo de multidimensional:
+
+$alunos = [
+    ["Ana", 8],
+    ["Carlos", 7],
+    ["Beatriz", 10]
+];

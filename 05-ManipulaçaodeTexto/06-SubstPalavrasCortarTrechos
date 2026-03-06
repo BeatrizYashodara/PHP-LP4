@@ -1,0 +1,31 @@
+<?php
+
+/*
+06.a - Substituir palavras em um texto
+
+Função: str_replace()
+*/
+
+$frase = "Eu gosto de Java";
+
+$novaFrase = str_replace("Java", "PHP", $frase);
+
+echo $novaFrase;
+
+/*
+06.b - Cortar parte de um texto
+
+Função: substr()
+
+Permite pegar apenas uma parte da string.
+
+substr(string, inicio, quantidade)
+*/
+
+$palavra = "Programação";
+
+echo substr($palavra, 0, 5);
+
+// Saída: Progr
+
+?>

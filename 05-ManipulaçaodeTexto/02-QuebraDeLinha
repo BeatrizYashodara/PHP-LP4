@@ -1,0 +1,2 @@
+echo $nome . "<br>";
+echo $cidade;

@@ -1,0 +1,21 @@
+<?php
+
+/*
+Função: strlen()
+
+Conta quantos caracteres existem na string.
+
+*/
+
+$texto = "PHP é muito legal";
+
+$tamanho = strlen($texto);
+
+echo "Quantidade de caracteres: " . $tamanho;
+
+/*
+SAÍDA
+Quantidade de caracteres: 17
+*/
+
+?>

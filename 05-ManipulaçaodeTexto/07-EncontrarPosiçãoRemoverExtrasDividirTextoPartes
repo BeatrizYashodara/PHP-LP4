@@ -1,0 +1,57 @@
+8️⃣ Encontrar posição de uma palavra
+
+Função: strpos()
+
+Procura onde uma palavra aparece dentro de outra.
+
+<?php
+
+$frase = "Eu estou aprendendo PHP";
+
+$posicao = strpos($frase, "PHP");
+
+echo $posicao;
+
+?>
+Saída
+21
+
+Significa que PHP começa na posição 21 da frase.
+
+9️⃣ Remover espaços extras
+
+Função: trim()
+
+Remove espaços antes e depois do texto.
+
+<?php
+
+$texto = "   Olá mundo   ";
+
+echo trim($texto);
+
+?>
+Saída
+Olá mundo
+🔟 Dividir texto em partes
+
+Função: explode()
+
+Divide um texto em várias partes, criando um array.
+
+<?php
+
+$frase = "maçã,banana,laranja";
+
+$frutas = explode(",", $frase);
+
+print_r($frutas);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [1] => banana
+    [2] => laranja
+)

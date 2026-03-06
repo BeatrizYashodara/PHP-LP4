@@ -1,0 +1,9 @@
+<?php
+
+$nome = "Beatriz";
+$cidade = "São Paulo";
+
+echo $nome;
+echo $cidade;
+
+?>

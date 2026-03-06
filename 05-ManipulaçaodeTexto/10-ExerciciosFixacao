@@ -1,0 +1,228 @@
+🧠 Parte 1 — 15 Exercícios de Manipulação de Strings em PHP
+
+Vou dividir em 3 níveis:
+
+🟢 Básico
+
+🟡 Intermediário
+
+🔴 Avançado
+
+🟢 Nível 1 — Básico
+Exercício 1
+
+Crie uma variável com seu nome e mostre a quantidade de caracteres.
+
+Código
+<?php
+
+$nome = "Beatriz";
+
+echo strlen($nome);
+
+?>
+Saída esperada
+7
+Exercício 2
+
+Mostre uma frase totalmente em letras maiúsculas.
+
+Código
+<?php
+
+$frase = "Estou aprendendo PHP";
+
+echo strtoupper($frase);
+
+?>
+Saída
+ESTOU APRENDENDO PHP
+Exercício 3
+
+Mostre uma frase totalmente em letras minúsculas.
+
+<?php
+
+$frase = "PHP É UMA LINGUAGEM WEB";
+
+echo strtolower($frase);
+
+?>
+Saída
+php é uma linguagem web
+Exercício 4
+
+Mostre a primeira letra de uma palavra em maiúscula.
+
+<?php
+
+$palavra = "programação";
+
+echo ucfirst($palavra);
+
+?>
+Saída
+Programação
+Exercício 5
+
+Junte nome e sobrenome em uma frase.
+
+<?php
+
+$nome = "Beatriz";
+$sobrenome = "Barros";
+
+echo "Nome completo: " . $nome . " " . $sobrenome;
+
+?>
+Saída
+Nome completo: Beatriz Barros
+🟡 Nível 2 — Intermediário
+Exercício 6
+
+Substitua uma palavra em uma frase.
+
+<?php
+
+$frase = "Eu gosto de Java";
+
+$nova = str_replace("Java", "PHP", $frase);
+
+echo $nova;
+
+?>
+Saída
+Eu gosto de PHP
+Exercício 7
+
+Remova espaços extras de um texto.
+
+<?php
+
+$texto = "   Aprendendo PHP   ";
+
+echo trim($texto);
+
+?>
+Saída
+Aprendendo PHP
+Exercício 8
+
+Pegue apenas os 4 primeiros caracteres de uma palavra.
+
+<?php
+
+$palavra = "Computador";
+
+echo substr($palavra, 0, 4);
+
+?>
+Saída
+Comp
+Exercício 9
+
+Descubra em qual posição uma palavra aparece.
+
+<?php
+
+$frase = "Eu estudo programação em PHP";
+
+echo strpos($frase, "PHP");
+
+?>
+Saída
+26
+Exercício 10
+
+Divida um texto em partes usando vírgula.
+
+<?php
+
+$frutas = "maçã,banana,laranja";
+
+$array = explode(",", $frutas);
+
+print_r($array);
+
+?>
+Saída
+Array
+(
+    [0] => maçã
+    [1] => banana
+    [2] => laranja
+)
+🔴 Nível 3 — Avançado
+Exercício 11
+
+Conte quantas palavras existem em uma frase.
+
+<?php
+
+$frase = "PHP é muito usado na web";
+
+echo str_word_count($frase);
+
+?>
+Saída
+6
+Exercício 12
+
+Inverta uma palavra.
+
+<?php
+
+$palavra = "PHP";
+
+echo strrev($palavra);
+
+?>
+Saída
+PHP
+
+(se fosse "casa" → asac)
+
+Exercício 13
+
+Verifique se uma palavra existe dentro da frase.
+
+<?php
+
+$frase = "Eu estudo PHP";
+
+if (strpos($frase, "PHP") !== false) {
+    echo "Palavra encontrada!";
+}
+
+?>
+Saída
+Palavra encontrada!
+Exercício 14
+
+Transforme uma frase em array de palavras.
+
+<?php
+
+$frase = "Aprender PHP é divertido";
+
+$palavras = explode(" ", $frase);
+
+print_r($palavras);
+
+?>
+Exercício 15
+
+Formate um nome removendo espaços e deixando em maiúsculo.
+
+<?php
+
+$nome = "   beatriz barros   ";
+
+$nome = trim($nome);
+$nome = strtoupper($nome);
+
+echo $nome;
+
+?>
+Saída
+BEATRIZ BARROS

@@ -1,0 +1,32 @@
+<?php
+
+$nome = "   beatriz barros   ";
+
+$nome = trim($nome);          // remove espaços
+$nome = strtoupper($nome);    // deixa maiúsculo
+
+$quantidade = strlen($nome);
+
+echo "Nome formatado: " . $nome . "<br>";
+echo "Quantidade de caracteres: " . $quantidade;
+
+/*
+Saída: 
+Nome formatado: BEATRIZ BARROS
+Quantidade de caracteres: 14
+
+📚 Funções de texto mais usadas em PHP
+Função	       O que faz
+strlen()	     Conta caracteres
+strtoupper()   Maiúsculas
+strtolower()	 Minúsculas
+ucfirst()	     Primeira letra maiúscula
+str_replace()	 Substitui texto
+substr()	     Corta texto
+strpos()	     Procura posição
+trim()	       Remove espaços
+explode()	     Divide texto
+
+*/
+
+?>

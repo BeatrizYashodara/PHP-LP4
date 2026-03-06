@@ -1,0 +1,39 @@
+<?php
+
+/*
+06.a - Letras maiúsculas
+
+Função: strtoupper()
+*/
+
+$nome = "beatriz";
+
+echo strtoupper($nome);
+
+// Saída: BEATRIZ
+
+/*
+06.b - Letras minúsculas
+
+Função: strtolower()
+*/
+
+$nome = "BEATRIZ";
+
+echo strtolower($nome);
+
+// Saída: beatriz
+
+/*
+06.c - Primeira letra maiúscula
+
+Função: ucfirst()
+*/
+
+$palavra = "php";
+
+echo ucfirst($palavra);
+
+// Saída: Php
+
+?>

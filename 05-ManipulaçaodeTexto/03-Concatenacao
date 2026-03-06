@@ -1,5 +1,11 @@
 <?php
 
+/*
+Concatenação significa juntar textos.
+
+Em PHP usamos o operador ponto (.).
+*/
+
 $nome = "Beatriz";
 $curso = "Programação";
 

@@ -1,0 +1,78 @@
+💻 Parte 2 — Mini Projeto
+Validador simples de cadastro em PHP
+
+Vamos simular um formulário de cadastro.
+
+Campos:
+
+nome
+
+email
+
+senha
+
+E vamos validar usando manipulação de strings.
+
+📄 Código completo
+<?php
+
+$nome = "   Beatriz Barros   ";
+$email = "beatriz@email.com";
+$senha = "123456";
+
+/* 1 — remover espaços extras */
+
+$nome = trim($nome);
+$email = trim($email);
+
+/* 2 — validar tamanho do nome */
+
+if(strlen($nome) < 3){
+    echo "Nome inválido <br>";
+}
+
+/* 3 — verificar email */
+
+if(strpos($email, "@") === false){
+    echo "Email inválido <br>";
+}
+
+/* 4 — validar senha */
+
+if(strlen($senha) < 6){
+    echo "Senha muito curta <br>";
+}
+
+/* 5 — formatar nome */
+
+$nome = ucwords(strtolower($nome));
+
+echo "Cadastro válido!<br>";
+echo "Nome: " . $nome . "<br>";
+echo "Email: " . $email;
+
+?>
+🧾 Saída esperada
+Cadastro válido!
+Nome: Beatriz Barros
+Email: beatriz@email.com
+🧠 O que você aprendeu nesse mini projeto
+Função	Uso
+trim()	remover espaços
+strlen()	validar tamanho
+strpos()	verificar texto
+strtolower()	padronizar letras
+ucwords()	primeira letra maiúscula
+💡 Desafio (nível universitário)
+
+Tente melhorar o sistema:
+
+1️⃣ Verificar se o email termina com .com
+
+2️⃣ Exigir que a senha tenha:
+
+pelo menos 1 número
+
+pelo menos 1 letra
+
+3️⃣ Converter o email para minúsculo automaticamente

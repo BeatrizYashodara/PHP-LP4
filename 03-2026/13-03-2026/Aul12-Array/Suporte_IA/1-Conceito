@@ -1,0 +1,15 @@
+1️⃣ O que é um Array?
+
+Um array é uma estrutura de dados que armazena vários valores dentro de uma única variável.
+
+Em vez de fazer:
+
+$nome1 = "Ana";
+$nome2 = "Carlos";
+$nome3 = "Maria";
+
+Podemos fazer:
+
+$nomes = ["Ana", "Carlos", "Maria"];
+
+Agora temos uma lista de valores dentro de uma variável só.

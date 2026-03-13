@@ -1,0 +1,50 @@
+🧠 Exercícios (dificuldade crescente)
+🟢 Básico
+
+1️⃣ Crie um array com 5 cores e imprima a terceira.
+
+2️⃣ Crie um array com 3 números e imprima todos com foreach.
+
+3️⃣ Crie um array com 4 frutas e adicione mais uma.
+
+4️⃣ Mostre quantos elementos existem em um array.
+
+5️⃣ Substitua um elemento de um array por outro.
+
+🟡 Intermediário
+
+6️⃣ Crie um array com 10 números e calcule a soma.
+
+7️⃣ Crie um array com 5 nomes e imprima em ordem inversa.
+
+8️⃣ Verifique se o nome "Ana" existe no array.
+
+9️⃣ Crie um array associativo com:
+
+nome
+idade
+profissão
+
+E imprima os dados.
+
+10️⃣ Percorra um array associativo mostrando:
+
+chave => valor
+🔴 Avançado
+
+11️⃣ Crie um array com notas de alunos e calcule a média.
+
+12️⃣ Crie uma matriz 3x3 e imprima todos os valores.
+
+13️⃣ Crie um array de produtos com:
+
+nome
+preço
+
+14️⃣ Percorra o array e calcule o valor total dos produtos.
+
+15️⃣ Crie um array com 10 números aleatórios e mostre:
+
+maior número
+
+menor número

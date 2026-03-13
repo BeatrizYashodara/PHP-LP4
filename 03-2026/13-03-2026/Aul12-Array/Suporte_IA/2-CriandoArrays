@@ -1,0 +1,10 @@
+2️⃣ Criando Arrays em PHP
+
+Existem duas formas principais.
+
+Forma moderna (mais usada)
+$frutas = ["Maçã", "Banana", "Laranja"];
+Forma tradicional
+$frutas = array("Maçã", "Banana", "Laranja");
+
+💡 Hoje em dia, prefira [].

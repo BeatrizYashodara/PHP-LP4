@@ -1,0 +1,28 @@
+9️⃣ Funções importantes de arrays
+count()
+
+Conta elementos.
+
+echo count($frutas);
+print_r()
+
+Mostra o array completo (ótimo para debug).
+
+print_r($frutas);
+array_push()
+
+Adiciona elemento.
+
+array_push($frutas, "Morango");
+array_pop()
+
+Remove o último.
+
+array_pop($frutas);
+in_array()
+
+Verifica se existe valor.
+
+if (in_array("Maçã", $frutas)) {
+    echo "Existe!";
+}

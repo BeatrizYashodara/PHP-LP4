@@ -45,10 +45,11 @@ echo "<br>";
 
 # "batizando" índices (índice) => (valor)
 $dados = [
-    10 => 1000;
-    20 => 2000;
-    30 => 3000
-    ];
+    10 => 1000,
+    20 => 2000,
+    30 => 3000,
+];
+
 echo $dados[10];
 echo "<br>";
 

@@ -1,0 +1,7 @@
+5️⃣ Adicionando elementos
+Método simples
+$frutas[] = "Manga";
+
+Resultado:
+
+["Maçã", "Banana", "Laranja", "Manga"]

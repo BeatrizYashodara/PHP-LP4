@@ -1,0 +1,29 @@
+7️⃣ Arrays Associativos
+
+Arrays também podem usar chaves em vez de índices numéricos.
+
+Exemplo:
+
+$pessoa = [
+    "nome" => "Ana",
+    "idade" => 25,
+    "cidade" => "São Paulo"
+];
+
+Acessando:
+
+echo $pessoa["nome"];
+
+Saída:
+
+Ana
+Percorrendo array associativo
+foreach ($pessoa as $chave => $valor) {
+    echo $chave . ": " . $valor . "<br>";
+}
+
+Saída:
+
+nome: Ana
+idade: 25
+cidade: São Paulo

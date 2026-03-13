@@ -35,6 +35,21 @@ um dado elemento), os arrays possuem como primeiro elemento o índice zero = 0.
 echo $valores2[0];
 echo "<br>";
 echo $nomes2[0];
-echo <br>;
+echo "<br>";
+
+/**
+ * A identificação (índice) da posição de um elemento do array não precisa ser sequencial
+ * Os arrays possuem um operador de atribuição.
+ * Exemplo:
+ */
+
+# "batizando" índices (índice) => (valor)
+$dados = [
+    10 => 1000;
+    20 => 2000;
+    30 => 3000
+    ];
+echo $dados[10];
+echo "<br>";
 
 ?> 

@@ -21,3 +21,9 @@ Acessando:
 
 echo $alunos[0][0]; // Ana
 echo $alunos[0][1]; // 8
+
+Percorrendo matriz
+foreach ($alunos as $aluno) {
+    echo "Nome: " . $aluno[0] . "<br>";
+    echo "Nota: " . $aluno[1] . "<br><br>";
+}

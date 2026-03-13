@@ -1,0 +1,23 @@
+8️⃣ Arrays Multidimensionais
+
+São arrays dentro de arrays.
+
+Exemplo: lista de alunos.
+
+$alunos = [
+    ["Ana", 8],
+    ["Carlos", 7],
+    ["Maria", 9]
+];
+
+Tabela mental:
+
+Nome	         Nota
+Ana            	8
+Carlos	        7
+Maria	          9
+
+Acessando:
+
+echo $alunos[0][0]; // Ana
+echo $alunos[0][1]; // 8

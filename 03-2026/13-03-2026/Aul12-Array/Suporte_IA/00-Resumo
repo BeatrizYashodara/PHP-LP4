@@ -1,0 +1,25 @@
+🧾 Resumo da Aula
+
+Arrays em PHP permitem armazenar vários valores em uma variável.
+
+Principais conceitos:
+
+✔ Índices começam em 0
+✔ Podem ser numéricos ou associativos
+✔ Podem ser multidimensionais
+✔ São percorridos com foreach ou for
+
+Funções importantes:
+
+count()
+print_r()
+array_push()
+array_pop()
+in_array()
+
+Estruturas:
+
+$array = [];
+$array["chave"];
+$array[0];
+$array[0][1];

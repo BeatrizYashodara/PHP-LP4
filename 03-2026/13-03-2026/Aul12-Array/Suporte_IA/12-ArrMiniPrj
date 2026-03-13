@@ -1,0 +1,50 @@
+🚀 Mini Projeto (muito bom para treinar)
+Sistema simples de cadastro de alunos
+Objetivo
+
+Criar um sistema que:
+
+1️⃣ Cadastre alunos em um array
+2️⃣ Armazene:
+
+nome
+idade
+nota
+
+3️⃣ Mostre:
+
+lista de alunos
+
+média das notas
+
+melhor aluno
+
+Estrutura exemplo
+$alunos = [
+    [
+        "nome" => "Ana",
+        "idade" => 20,
+        "nota" => 8
+    ],
+    [
+        "nome" => "Carlos",
+        "idade" => 22,
+        "nota" => 7
+    ]
+];
+
+Depois percorrer:
+
+foreach ($alunos as $aluno) {
+    echo $aluno["nome"];
+}
+
+💡 Desafios extras
+
+ordenar alunos por nota
+
+mostrar alunos aprovados
+
+calcular média da turma
+
+mostrar maior nota

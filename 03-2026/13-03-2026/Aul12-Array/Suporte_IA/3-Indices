@@ -1,0 +1,23 @@
+3️⃣ Índices do Array
+
+Cada elemento possui um índice numérico, começando em 0.
+
+$frutas = ["Maçã", "Banana", "Laranja"];
+Índice	Valor
+0	Maçã
+1	Banana
+2	Laranja
+Acessando elementos
+echo $frutas[0];
+
+Saída:
+
+Maçã
+
+Outro exemplo:
+
+echo $frutas[2];
+
+Saída:
+
+Laranja

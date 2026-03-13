@@ -1,0 +1,6 @@
+4️⃣ Alterando valores
+$frutas[1] = "Uva";
+
+Array agora:
+
+["Maçã", "Uva", "Laranja"]

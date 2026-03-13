@@ -1,0 +1,24 @@
+6️⃣ Percorrendo Arrays
+
+Normalmente usamos loops.
+
+foreach (mais usado)
+$frutas = ["Maçã", "Banana", "Laranja"];
+
+foreach ($frutas as $fruta) {
+    echo $fruta . "<br>";
+}
+
+Saída:
+
+Maçã
+Banana
+Laranja
+for
+$frutas = ["Maçã", "Banana", "Laranja"];
+
+for ($i = 0; $i < count($frutas); $i++) {
+    echo $frutas[$i] . "<br>";
+}
+
+count() conta quantos elementos existem no array.

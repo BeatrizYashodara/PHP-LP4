@@ -1,0 +1,61 @@
+<?php
+
+// Array Multidimensional
+
+/**
+ * São arrays numéricos ou
+ *  associativos, cujos elementos são outros arrays.
+ * 
+ * É uma estrutura multidimensional, pois possui
+ *  elementos de array dentro de um outro array.
+ */
+
+# exemplos
+
+# 1 - multidimensional numérico
+$cod_lanches_precos = [
+//    X     Y
+    [11, 18.50],
+    [12, 21.5],
+    [13, 25.6]
+];
+echo "1 - multidimensional numérico" . "<br>";
+echo  "codigo: ". $cod_lanches_precos[0][0] . "<br>";
+echo "preço: R$". $cod_lanches_precos[0][1]; 
+
+echo "<br>" ;
+echo "<br>" ;
+
+# 2 - multidimensional associativo
+$feiticos_pontos = [
+    'ataque' => ['bombarda', 'incendio'],
+    'defesa' => ['expelliarmus', 'acquamenti'],
+    'utilitario' => ['alohomora', 'oculus reparo']
+];
+echo "2 - multidimensional associativo" . "<br>";
+echo  "fetiço: ". $feiticos_pontos['ataque'][1] . "<br>";
+echo  "fetiço: ". $feiticos_pontos['defesa'][0] . "<br>";
+echo  "fetiço: ". $feiticos_pontos['utilitario'][1] . "<br>";
+//echo "preço: R$". $feiticos_pontos[0][1]; 
+
+
+echo "<br>" ;
+echo "<br>" ;
+
+# 3 - multidimensional misto
+
+$alturas_alunos = [
+    ['Otávio', 1.69],
+    ['Wallyson', 1.70], 
+    ['Gaby', 1.58],
+    ['Max', 1.85],
+    ['Beia', 1.58]
+];
+echo "3 - multidimensional misto" . "<br>";
+echo  "Nome: ". $alturas_alunos[0][0] . ". Altura: ". $alturas_alunos[0][1]. "<br>";
+echo  "Nome: ". $alturas_alunos[1][0] . ". Altura: ". $alturas_alunos[1][1]. "<br>";
+echo  "Nome: ". $alturas_alunos[2][0] . ". Altura: ". $alturas_alunos[2][1]. "<br>";
+echo  "Nome: ". $alturas_alunos[3][0] . ". Altura: ". $alturas_alunos[3][1]. "<br>";
+echo  "Nome: ". $alturas_alunos[4][0] . ". Altura: ". $alturas_alunos[4][1]. "<br>";
+
+?>

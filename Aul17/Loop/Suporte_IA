@@ -1,0 +1,195 @@
+📘 Aula de PHP — Laços de Repetição
+🧠 O que são laços de repetição?
+
+Laços (ou loops) servem para executar um bloco de código várias vezes, sem precisar repetir o código manualmente.
+
+👉 Exemplo simples:
+
+Exibir números de 1 a 10 sem repetir echo 10 vezes.
+
+🔁 Tipos de laços em PHP
+
+Temos 4 principais:
+
+for
+while
+do...while
+foreach
+🔹 1. Laço for
+📌 Quando usar?
+
+Quando você sabe quantas vezes quer repetir.
+
+🧾 Estrutura:
+for (inicialização; condição; incremento) {
+    // código
+}
+✅ Exemplo:
+for ($i = 1; $i <= 5; $i++) {
+    echo "Número: $i <br>";
+}
+🔍 Explicação:
+$i = 1 → começa no 1
+$i <= 5 → vai até 5
+$i++ → soma 1 a cada volta
+🔹 2. Laço while
+📌 Quando usar?
+
+Quando você não sabe exatamente quantas repetições vai ter.
+
+🧾 Estrutura:
+while (condição) {
+    // código
+}
+✅ Exemplo:
+$i = 1;
+
+while ($i <= 5) {
+    echo "Número: $i <br>";
+    $i++;
+}
+⚠️ Cuidado:
+
+Se a condição nunca ficar falsa → loop infinito 😱
+
+🔹 3. Laço do...while
+📌 Diferença importante:
+
+Ele executa pelo menos uma vez, mesmo que a condição seja falsa.
+
+🧾 Estrutura:
+do {
+    // código
+} while (condição);
+✅ Exemplo:
+$i = 10;
+
+do {
+    echo "Número: $i <br>";
+    $i++;
+} while ($i <= 5);
+
+👉 Mesmo com $i = 10, ele executa 1 vez.
+
+🔹 4. Laço foreach
+📌 Quando usar?
+
+Para percorrer arrays (vetores).
+
+🧾 Estrutura:
+foreach ($array as $valor) {
+    // código
+}
+✅ Exemplo:
+$nomes = ["Ana", "Carlos", "Beatriz"];
+
+foreach ($nomes as $nome) {
+    echo "Nome: $nome <br>";
+}
+🔁 Foreach com chave:
+foreach ($array as $chave => $valor) {
+    // código
+}
+Exemplo:
+$idades = [
+    "Ana" => 20,
+    "Carlos" => 25
+];
+
+foreach ($idades as $nome => $idade) {
+    echo "$nome tem $idade anos <br>";
+}
+🧰 Comandos úteis dentro de loops
+🔸 break
+
+Interrompe o loop:
+
+for ($i = 1; $i <= 10; $i++) {
+    if ($i == 5) {
+        break;
+    }
+    echo $i;
+}
+
+👉 Para no 4
+
+🔸 continue
+
+Pula uma iteração:
+
+for ($i = 1; $i <= 5; $i++) {
+    if ($i == 3) {
+        continue;
+    }
+    echo $i;
+}
+
+👉 Pula o 3
+
+🧪 Exemplos práticos
+📊 Tabuada:
+$num = 5;
+
+for ($i = 1; $i <= 10; $i++) {
+    echo "$num x $i = " . ($num * $i) . "<br>";
+}
+📦 Percorrendo lista de produtos:
+$produtos = ["Notebook", "Mouse", "Teclado"];
+
+foreach ($produtos as $produto) {
+    echo "Produto: $produto <br>";
+}
+🔎 Buscar um valor:
+$numeros = [10, 20, 30, 40];
+
+foreach ($numeros as $n) {
+    if ($n == 30) {
+        echo "Encontrado!";
+        break;
+    }
+}
+⚖️ Qual usar?
+Situação	Melhor escolha
+Número fixo de repetições	for
+Condição variável	while
+Precisa rodar pelo menos 1 vez	do...while
+Trabalhar com arrays	foreach
+🧠 Exercícios (com dificuldade crescente)
+🟢 Básico
+Faça um for que exiba números de 1 a 10
+Faça um while que exiba números de 10 a 1
+Exiba apenas números pares de 1 a 20
+🟡 Intermediário
+Faça a tabuada de um número escolhido pelo usuário
+Some todos os números de 1 a 100
+Percorra um array e exiba apenas nomes com mais de 5 letras
+🔴 Avançado
+Conte quantos números pares existem em um array
+Simule um login com 3 tentativas (while)
+Crie um sistema que percorre produtos e aplica desconto
+🚀 Mini Projeto
+💡 Sistema simples de lista de tarefas
+Objetivo:
+Criar um array de tarefas
+Exibir todas
+Marcar algumas como concluídas
+Exemplo:
+$tarefas = [
+    ["nome" => "Estudar PHP", "feito" => false],
+    ["nome" => "Treinar lógica", "feito" => true]
+];
+
+foreach ($tarefas as $tarefa) {
+    if ($tarefa["feito"]) {
+        echo "✅ " . $tarefa["nome"] . "<br>";
+    } else {
+        echo "❌ " . $tarefa["nome"] . "<br>";
+    }
+}
+📌 Resumo final
+for → repetições controladas
+while → baseado em condição
+do...while → executa ao menos uma vez
+foreach → ideal para arrays
+break → interrompe
+continue → pula

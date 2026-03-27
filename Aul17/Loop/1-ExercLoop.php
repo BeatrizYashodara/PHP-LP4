@@ -39,7 +39,7 @@ primos.
 
   // saídas
       for ($i = 0; $i < 50; $i++){
-        echo ($i+1) . "o numero primo: " . $primos[$i] . <"br">;
+        echo ($i+1) . "o numero primo: " . $primos[$i] . "<br>";
       }
 
 ?>

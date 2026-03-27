@@ -1,0 +1,48 @@
+⚖️ Boas práticas
+
+✔ Nome claro (calcularTotal, validarEmail)
+✔ Uma função = uma responsabilidade
+✔ Evite funções gigantes
+✔ Prefira return
+✔ Use parâmetros ao invés de global
+
+🧠 Exercícios
+🟢 Básico
+Função que imprime "Olá mundo"
+Função que soma dois números
+Função que retorna o dobro de um número
+
+🟡 Intermediário
+Função que verifica se número é par
+Função que calcula média de um array
+Função que retorna maior valor de um array
+
+🔴 Avançado
+Função de login
+Função que conta vogais em uma string
+Função recursiva (Fibonacci)
+
+🚀 Mini Projeto
+
+💡 Carrinho de compras
+function calcularTotal($itens) {
+    $total = 0;
+
+    foreach ($itens as $item) {
+        $total += $item["preco"];
+    }
+
+    return $total;
+}
+
+$itens = [
+    ["nome" => "Mouse", "preco" => 50],
+    ["nome" => "Teclado", "preco" => 100]
+];
+
+echo calcularTotal($itens);
+📌 Resumo
+Funções evitam repetição
+Podem receber parâmetros
+Podem retornar valores
+Podem ser reutilizadas em todo o sistema

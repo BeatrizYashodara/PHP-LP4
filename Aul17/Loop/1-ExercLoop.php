@@ -11,7 +11,6 @@ primos.
 
   // entradas
       $j = 1; // divisor
-      $local = 0;
       $primos = [];
       $qt = 0; // qt maxima no vetor
   
@@ -25,7 +24,7 @@ primos.
       for ($j = 1; $j <= $i; $j++){
           
       // verificação de número primo
-            if ($local % $j == 0){
+            if ($i % $j == 0){
               $c += 1; }
       }
           // se sim, armazenar em array

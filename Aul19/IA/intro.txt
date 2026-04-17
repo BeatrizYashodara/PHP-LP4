@@ -1,0 +1,103 @@
+Vamos estruturar essa aula em: Conceitos, Sintaxe Prática, Exercícios e Projetos.
+
+1. O Conceito: Molde vs. Objeto
+Imagine que uma Classe é uma planta arquitetônica (um blueprint). Ela não é a casa em si, mas define quantos quartos a casa terá, a cor das paredes e como as portas abrem.
+
+O Objeto é a casa construída a partir dessa planta. Você pode construir várias casas (instâncias) usando o mesmo molde, mas cada uma terá seu próprio endereço e moradores.
+
+2. Sintaxe Básica em PHP
+No PHP, definimos uma classe usando a palavra-chave class. Por convenção (PSR-12), nomes de classes usam PascalCase.
+
+Propriedades e Métodos
+Propriedades: Variáveis dentro da classe (características).
+
+Métodos: Funções dentro da classe (comportamentos).
+
+PHP
+<?php
+
+class Celular {
+    // Propriedades (Atributos)
+    public string $marca;
+    public string $modelo;
+    public int $bateria = 100;
+
+    // Método (Comportamento)
+    public function enviarMensagem(string $texto): void {
+        echo "Enviando: $texto";
+    }
+}
+
+// Instanciando o objeto
+$meuTelefone = new Celular();
+$meuTelefone->marca = "Apple";
+$meuTelefone->modelo = "iPhone 15";
+
+$meuTelefone->enviarMensagem("Olá, estou aprendendo PHP!");
+3. O Construtor e Visibilidade
+O PHP utiliza um "método mágico" chamado __construct que é executado automaticamente quando você cria o objeto.
+
+Além disso, temos os modificadores de acesso:
+
+public: Acesso de qualquer lugar.
+
+private: Acesso apenas de dentro da própria classe.
+
+protected: Acesso pela classe e por suas "filhas" (herança).
+
+Exemplo Moderno (PHP 8+)
+O PHP 8 introduziu a Promoção de Propriedades no Construtor, que torna o código muito mais limpo:
+
+PHP
+<?php
+
+class ContaBancaria {
+    // O PHP já cria as propriedades e as atribui automaticamente
+    public function __construct(
+        private string $titular,
+        private float $saldo = 0.0
+    ) {}
+
+    public function depositar(float $valor): void {
+        if ($valor > 0) {
+            $this->saldo += $valor;
+        }
+    }
+
+    public function getSaldo(): string {
+        return "Titular: {$this->titular} | Saldo: R$ " . number_format($this->saldo, 2, ',', '.');
+    }
+}
+
+$conta = new ContaBancaria("Fulano de Tal", 500.00);
+$conta->depositar(150.50);
+echo $conta->getSaldo();
+4. Exercícios de Fixação
+Tente resolver estes desafios para consolidar a lógica:
+
+Classe Carro: Crie uma classe Carro com propriedades marca, cor e velocidadeAtual. Adicione métodos acelerar() e frear(). A velocidade não pode ser negativa.
+
+Encapsulamento: Crie uma classe Produto com nome e preco. Torne o preço private. Crie um método para aplicar um desconto percentual e outro para exibir o preço formatado.
+
+Conversor de Moedas: Crie uma classe que receba um valor em Reais no construtor e tenha métodos para converter para Dólar e Euro (use cotações fixas para o exercício).
+
+5. Sugestões de Projetos
+Para quem está estagiando ou estudando para ser desenvolvedor, estes projetos ajudam a entender como as classes se organizam em sistemas reais:
+
+Nível Iniciante: Sistema de Biblioteca
+Classes: Livro, Usuario, Emprestimo.
+
+Objetivo: O objeto Emprestimo deve receber um Livro e um Usuario e definir uma data de devolução. Isso ajuda a entender como objetos interagem entre si.
+
+Nível Intermediário: Gerenciador de Tarefas (To-Do List)
+Classes: Tarefa, Categoria, ListaDeTarefas.
+
+Objetivo: Criar um sistema onde você pode adicionar objetos Tarefa a um array dentro da classe ListaDeTarefas. Implemente métodos para filtrar tarefas por categoria ou status (concluída/pendente).
+
+Nível Avançado: Simulador de E-commerce (Checkout)
+Classes: Carrinho, ItemPedido, CupomDesconto.
+
+Objetivo: A classe Carrinho deve calcular o total somando os preços dos objetos ItemPedido. Deve permitir a aplicação de um objeto CupomDesconto que altera o valor final.
+
+Dica de Ouro:
+Como você mencionou que está lidando com integração de Back-end e Refatoração, foque em entender o Princípio da Responsabilidade Única (SRP): uma classe deve fazer apenas uma coisa. Se sua classe Usuario está enviando e-mail, salvando no banco e validando CPF, talvez seja hora de dividir esses comportamentos em classes diferentes.
